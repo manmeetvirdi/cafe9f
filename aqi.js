@@ -7,7 +7,7 @@
                 const response = await fetch(url);
                 const data = await response.json();
                 const aqi = data.data.aqi;
-                document.getElementById('data2').textContent = `Gurgaon AQI: ${aqi}`;
+                document.getElementById('data2').textContent = `AQI: ${aqi}`;
             } catch (error) {
                 console.error('Error fetching the AQI data:', error);
                 document.getElementById('aqi').textContent = 'Error fetching AQI data';
