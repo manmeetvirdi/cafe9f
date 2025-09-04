@@ -1,6 +1,6 @@
 // URL for the AQI data
         //const url = 'https://api.waqi.info/feed/india/gurgaon/vikas-sadan-gurgaon/?token=21a6024d38c117f1f11408e86df27557aa2f7240';
-        const url = 'https://api.waqi.info/feed/india/?token=21a6024d38c117f1f11408e86df27557aa2f7240';
+        const url = 'https://api.waqi.info/feed/here/?token=21a6024d38c117f1f11408e86df27557aa2f7240';
         // Function to fetch AQI data
         async function fetchAQIData() {
             try {
