@@ -1,23 +1,17 @@
 async function fetchData() {
-    const urlapiGET = 'https://6721c0ab98bbb4d93ca980e0.mockapi.io/api/v1/number/1';
+    // We now ask our own domain (the Cloudflare Worker)
+    const url = '/api/queue'; 
     
     try {
-        const response = await fetch(urlapiGET);
+        const response = await fetch(url);
         const data = await response.json();
+        // The Worker sends back the JSON from mockapi.io
         document.getElementById('data1').innerText = data.value;
-       //document.getElementById('data2').innerText = data.n1;
- 
-      
     } catch (error) {
-        console.error('Error fetching data:', error);
-        document.getElementById('data1').innerText = `Error fetching data: ${error.message}`;
+        console.error('Error fetching queue data:', error);
+        document.getElementById('data1').innerText = `Error: ${error.message}`;
     }
 }
-
-
-
-
-
 
 // Call the function to fetch data when the window loads
 window.onload = fetchData;
